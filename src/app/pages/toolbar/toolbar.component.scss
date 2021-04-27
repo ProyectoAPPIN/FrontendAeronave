@@ -1,0 +1,188 @@
+body{
+  margin:0;
+  font-family: sans-serif;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;    
+  font-weight: 600;
+  background:#e4e4e4;
+  color: #495057;
+ }
+
+ img.logo{
+  color:white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 50px;
+  top: 10px;
+  font-weight: bold;
+  position: relative;
+}
+.example-icon{    
+  margin-left: 10px; 
+}
+.cerrar{
+  background: #495057;  
+}
+
+.posicionBotton{
+  position: relative;
+  text-align: center;
+}
+
+
+span.label{    
+  top: 20px;
+  padding: 0 350px;    
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  position: relative;
+}
+ #btn-menu{
+   display: none;  
+   top: 40px;
+   font-weight: bold;
+   position: relative;     
+ }
+
+ header label{
+  font-size:30px;
+  background:#e4e4e4; 
+  display: none;  
+  width: 30px;
+  height: 30px; 
+ }
+
+ header label:hover{
+  cursor: pointer;
+  background:#e4e4e4;
+}
+
+.menu ul{
+  display: inline-block; 
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; 
+  top: -40px;
+  font-weight: bold;
+  position: relative;
+  margin-right: -10px;   
+}
+
+.logoPerfil{
+  top:5px;
+  position: relative;
+}
+.logoPerfil1 {
+  top:5px;
+  position: relative;
+  border-radius:150px;
+  border: 1px solid rgb(124, 123, 123);
+}
+
+header div{  
+  display: flex;
+  justify-content: flex-end;   
+  background:#d8d8d8;
+  width: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  margin-right: 10 0px;   
+  
+}
+
+.menu li{ 
+  font-size: 14px;
+  padding: 7px 10px;   
+}
+
+
+.menu li a{
+  display: block;
+  padding: 15px 20px;  
+  text-decoration: none;
+  display: flex;
+}
+
+//768px
+@media (max-width:858px){
+  header label{
+    display: block;
+    position: relative;
+    top:40px
+  }
+  header div{
+    display: block;
+    top:-40px;
+    display: flex;
+    justify-content: flex-end; 
+    
+  }
+  span.label{  
+    display: none;
+  }
+
+  img.logo{    
+    top:-30px;
+    left:25px;
+  }
+  .menu{  
+    background: #e4e4e4;
+    line-height: 50px; 
+    width: 20%;
+    margin-left: -70%;    
+    transition: all 0.5s;
+    top:80px;
+    position: absolute;
+  }
+  .menu ul{
+    flex-direction: column;
+  }
+  .menu li{
+    left: -10px;
+    position: relative;
+    top:20px; 
+    .example-icon{
+      display: none;
+    }  
+  }
+  
+  #btn-menu:checked ~ .menu{
+  margin: 0;
+  left: 0;
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 28px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+
+

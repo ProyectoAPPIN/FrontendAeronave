@@ -1,0 +1,65 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" size="small" type="ball-beat" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+<div class="contenedor">
+  <mat-toolbar class="toolbar navbar">
+   
+    <a routerLink="/home">
+      <button mat-icon-button class="example-icon favorite-icon">
+        <!-- <mat-icon>home</mat-icon> -->
+        <img width="50px" #tooltip="matTooltip" 
+          matTooltip="Inicio" 
+          [matTooltipPosition]="this.positionOptions[0]"
+          matTooltipHideDelay="100"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+          src="../assets/Images/avion.jpg">
+
+          
+
+      </button>
+    </a>
+    <div><img class="logoPerfil1" 
+      #tooltip="matTooltip" 
+                matTooltip= "{{nombreUsuario}}"              
+                [matTooltipPosition]="this.positionOptions[0]"
+                matTooltipHideDelay="100"
+                aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+      src="../assets/Images/user.png" height="23px">&nbsp;&nbsp;
+      <span class="logoPerfil">{{usuario}} </span> 
+
+
+    </div><br>
+    <span class="example-spacer"></span>    
+    <span class="fill-remaining-space">
+
+    </span>
+  </mat-toolbar>
+  <mat-sidenav-container>    
+    <mat-sidenav #sideNav mode="side" [(opened)]="opened">
+      <br><br>
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">        
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>          
+          <button mat-icon-button disabled></button>
+          <!-- routerLink="ordenesCompra" -->
+          <a (click)="cargarMenu(node.name)">
+            <!-- <mat-icon>
+              {{node.icon}}
+            </mat-icon> -->
+            <span style="color: #0463AB; font-size: 12px;"><b>{{node.name}}</b></span>
+          </a>          
+        </mat-tree-node>        
+        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+          <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.subcategoria">            
+            <mat-icon class="mat-icon-rtl-mirror">              
+              {{treeControl.isExpanded(node) ? 'expand_less' : node.icon}}
+            </mat-icon>
+          </button>          
+            {{node.name}}                  
+        </mat-tree-node>
+      </mat-tree>
+    </mat-sidenav>
+    <mat-sidenav-content>      
+     <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

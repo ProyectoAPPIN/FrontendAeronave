@@ -1,0 +1,42 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="Ball-Beat" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
+<div class="card">
+
+    <div class="card-header text-center">
+        <h3>Registro Aeronave</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <form novalidate [formGroup]="ordenesCompraForm" class="text-center">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Nombre Aeronave</mat-label>
+                        <input matInput type="text" required formControlName="nombre">                        
+                        <mat-error>
+                            <p>Debes ingresar un texto</p>
+                        </mat-error>
+                    </mat-form-field>
+                    <br><br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Tipo</mat-label>
+                        <select matNativeControl required formControlName="tipo">
+                          <option value="avion">Avion</option>
+                          <option value="helicoptero">Helicoptero</option>                          
+                        </select>
+                      </mat-form-field>
+                </form>
+            </div>
+            <div>
+                <div>
+                    <button class="buttonGuardar" mat-mini-fab color="primary" (click)="Guardar()">
+                        <mat-icon>trending_down</mat-icon>
+                    </button>
+                    <br>
+                    <mat-label class="labelDescargar">Registrar Aeronave</mat-label>
+                </div>
+            </div>
+        </div>      
+    </div>
+    
+</div>

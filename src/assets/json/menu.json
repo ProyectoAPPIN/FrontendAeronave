@@ -1,0 +1,31 @@
+ [
+    {
+        "IdMenu": 1,
+        "name": "Aeronaves",
+        "icon": "settings_input_composite",
+        "children": [
+            {
+                "codMenu": 1,
+                "name": "Registro",
+                "icon": "touch_app",
+                "children": [
+                    {
+                        "codpantalla": 1,
+                        "name": "Registro Aeronaves",
+                        "icon": ""
+                    },                
+                    {
+                        "codpantalla": 2,
+                        "name": "Listado Aeronaves",
+                        "icon": ""
+                    },
+                    {
+                        "codpantalla": 2,
+                        "name": "Solicitud Alquiler",
+                        "icon": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

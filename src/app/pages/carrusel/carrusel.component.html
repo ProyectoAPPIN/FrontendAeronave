@@ -1,0 +1,15 @@
+<div class="container">
+    <div>
+      <div class="col-md-12 py-1">        
+        <ngb-carousel *ngIf="event_list">
+          <ng-template ngbSlide *ngFor="let event of upcoming_events">
+            <img [src]="event.img" alt="Random slide">
+            <div class="carousel-caption">              
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+
+

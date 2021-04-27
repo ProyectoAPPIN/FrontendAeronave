@@ -1,0 +1,36 @@
+
+<div class="card">
+    <div class="card-header text-center">
+        <h3>Solicitud Alquiler</h3>
+    </div>
+    <div>
+        <br><br>
+        <form novalidate [formGroup]="ordenesCompraForm" class="alinear" >
+            <mat-form-field appearance="fill">
+                <mat-label>Aeronave</mat-label>
+                <select matNativeControl required formControlName="avion" >
+                <option *ngFor="let aero of dataSource" [value]="aero.Id">{{aero.Nombre}}</option>                                                  
+                </select>
+            </mat-form-field>
+            <br><br>
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha</mat-label>    
+                <input matInput type="fecha" placeholder="fecha solictud" formControlName="fecha" required>
+                
+            </mat-form-field>
+            <br><br>
+            <mat-form-field appearance="fill">
+                <mat-label>Piloto</mat-label>
+                <select matNativeControl required formControlName="piloto">
+                    <option *ngFor="let pilo of dataSourcePilotos" [value]="pilo.Id">{{pilo.Nombre}} {{pilo.Apellidos}}</option>                          
+                </select>
+            </mat-form-field>
+            <br><br>
+            <button mat-raised-button color="primary" (click)="registrarSolicitud()">Guardar Solitud</button>            
+        </form>
+    </div>    
+</div>
+      
+
+    
+

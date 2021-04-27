@@ -1,0 +1,21 @@
+/* Structure */
+.fondo{
+    background-color:rgb( 213, 219, 219);   
+  }
+  table {
+      width: 100%;
+    }
+    .mat-icon{
+      color:rgb(247, 245, 245); 
+    }
+    .mat-form-field{
+      font-size: 2rem;
+      width: 98%;
+      margin: 0 auto;
+      display:block;
+      margin-top: 1rem;
+    }
+    .card-header {    
+      background: #0463AB;
+      color: white;
+    }

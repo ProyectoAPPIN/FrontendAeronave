@@ -1,0 +1,87 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;    
+    display: flex;
+    align-items: center;   
+    font-weight: 600;
+    background: #e4e4e4;
+    color: #495057;
+  }
+
+  .navbar-brand{
+    margin: 30px;  
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+mat-icon {
+    cursor:pointer;
+    color: #495057;
+}    
+
+}
+$animacion:all .6s;
+mat-tree{
+    width: 240px;
+    height: 100%;
+    cursor:pointer;
+    background:rgb(66, 73, 73);   
+    position:fixed;
+    top:80px;
+    z-index:1000;      
+}
+
+mat-sidenav{
+  width: 230px;
+  cursor:pointer;
+  background:#e4e4e4;  
+  position:fixed;
+  top:95px;
+  z-index:1000;  
+
+}
+
+.mat-tree-node:hover {
+    background-color: rgba(31, 31, 30, 0.1) !important;   
+        transform: translateX(1%);
+        transition: $animacion;   
+}
+
+.mat-tree{    
+     background: #e4e4e4;     
+}
+
+.example-spacer {
+    flex: 12 1 auto;
+  }
+  
+  .logoPerfil{
+    top:-3px;
+    position: relative; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 16px;
+    left: 40px;   
+  }
+
+  .logoPerfil1 {
+    left: 50px;
+    top:-3px;
+    position: relative;
+    border-radius:150px;
+    
+    border: 1px solid rgb(124, 123, 123);
+  }
+
+  .cargo {
+    left: -40px;
+    top:16px;
+    position: relative; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 16px;   
+
+  }

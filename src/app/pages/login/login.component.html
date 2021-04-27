@@ -1,0 +1,39 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" size="small" type="ball-beat" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+<div class="card text-center header">
+    <div class="col-12 text-center background-logo">
+      <img class="img-login my-2" src="../../../assets/Images/avion1.jpg" alt="logo sodimac" width="500" height="150">
+    </div>
+  
+    <div class="card-header smac-page-footer">
+      <h4 class="text-light">Inicio de Sesión</h4>
+    </div>
+    <div class="card-body">
+  
+      <form novalidate [formGroup]="loginForm" class="text-center">
+        <mat-form-field class="col-6 mt-3">
+          <input matInput placeholder="Identificacion" (keyup)="applyFilter($event)" [value]="usuarioM" formControlName="usuario" required maxlength="10">
+        </mat-form-field>
+        <br />
+        <mat-form-field class="col-6 mt-3">
+          <input matInput type="password" placeholder="Contraseña" formControlName="contrasena" required maxlength="16" minlength="minPassword">
+        </mat-form-field>
+  
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-primary" (click)="login()" [disabled]="!loginForm.valid" >Ingresar</button>
+        </div>
+  
+      </form>
+  
+  
+    </div>
+  
+    <div class="card-footer text-muted smac-page-footer">  
+      <div class="col-sm-8 offset-sm-2 text-center text-light">
+        <label class="text-light">Alquiler de Aeronaves</label> <br />       
+        &copy; 2021 Copyright:        
+      </div>      
+    </div>
+  </div>
+  
